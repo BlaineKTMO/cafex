@@ -15,14 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class ControlServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
     private MainDAO mainDAO;
     private String currentUser;
     private HttpSession session = null;
-    private static final long serialVersionUID = 1L;
 
-    public ControlServlet() {
-
-    }
+    public ControlServlet() {}
 
     @Override
     public void init() {
@@ -30,17 +28,19 @@ public class ControlServlet extends HttpServlet {
         currentUser = "";
     }
 
+    // No post handling
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
     }
 
+    // Handle recieved action
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getServletPath();
-        System.out.println(action);
+        System.out.println("Got action: " + action);
 
         try {
             switch (action) {

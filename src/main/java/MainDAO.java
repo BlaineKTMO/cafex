@@ -8,10 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
-//import java.sql.Connection;
-//import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-//import java.sql.Statemen
 
 public class MainDAO {
     private static final long serialVersionUID = 1L;
