@@ -16,15 +16,16 @@ import javax.servlet.http.HttpSession;
 
 public class ControlServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private MainDAO mainDAO;
+    private UserDAO userDAO;
     private String currentUser;
     private HttpSession session = null;
 
-    public ControlServlet() {}
+    public ControlServlet() {
+    }
 
     @Override
     public void init() {
-        mainDAO = new MainDAO();
+        userDAO = new UserDAO();
         currentUser = "";
     }
 
@@ -56,7 +57,7 @@ public class ControlServlet extends HttpServlet {
     protected void login(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         System.out.println("Page loaded - now trying to connect.");
-        mainDAO.test();
+        userDAO.test();
         System.out.println("Connection established!!");
         RequestDispatcher dispatcher = request.getRequestDispatcher("test.jsp");
         dispatcher.forward(request, response);

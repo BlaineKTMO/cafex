@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class MainDAO {
+public class UserDAO {
     private static final long serialVersionUID = 1L;
     private Connection connect = null;
     private Statement statement = null;
@@ -37,8 +37,13 @@ public class MainDAO {
         }
     }
 
+    public void login() throws SQLException {
+        connect_func();
+    }
+
     public void test() throws SQLException {
         connect_func();
+
         disconnect();
     }
 
