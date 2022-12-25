@@ -5,17 +5,12 @@ An inventory and sales database system for a coffee shop. Allows for automated i
 
 Built using Maven in VS Code. Utilizes JDBC for MySQL integration and JSP for webpages.
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
 ## Run Locally (Tomcat 9)
 
 Clone the project repository
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/BlaineKTMO/cafex.git
 ```
 
 Navigate to project directory
@@ -36,3 +31,7 @@ Add the generated war file in the target directory to your server deployments an
 
 - [@Blaine Oania](https://www.github.com/BlaineKTMO)
 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
